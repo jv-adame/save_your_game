@@ -1,0 +1,94 @@
+@font-face{
+	font-family: "applekid";
+	src: url("apple_kid.ttf") format("truetype");
+}
+
+.App {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*I didn't use scss this time, can you tell?*/
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.list-group-item{
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  list-style: none;
+  text-align: left;
+  font-family: "applekid";
+  margin: 10px 0;
+  
+}
+
+.flexContain{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.todoContain{
+  color: white;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.btn{
+  color: white;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+.btn[disabled]{
+  border-color: white;
+  background-color: black;
+}
+
+.pullDown{
+  color: white;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+}
+
+.inputBar{
+  color: white;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+}
+/*Band-aid because the svg somehow supercedes CompleteButton on stack*/
+svg{
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}

@@ -1,0 +1,45 @@
+
+  toggleMenu(string){
+    let copy = Array.from(this.state.list);
+    let display = []
+
+    
+    /*The only way for the array in the state to be greater than the backup
+      length is for it to be not instantiated at all
+    */
+    
+    if (copy.length > backup.length  && string !== "all")
+    {
+      backup = copy;
+    }
+    
+
+
+    switch (string){
+       case "all":
+           display = backup;
+           break;
+       case "active":
+           display = backup.filter(this.filterActive);
+           break;
+       case "complete":
+           display = backup.filter(this.filterComplete);
+           break;
+        default:
+          /* lol */ 
+        }
+    
+    
+    this.setState({
+        list: display
+    });
+  };
+  filterAll(array){
+    return array
+  }
+  filterActive(array){
+    return array.complete === false;
+  }
+  filterComplete(array){
+    return array.complete === true;
+  }
