@@ -194,17 +194,6 @@ class App extends Component {
 
     return (
       <div className="wrapper">
-          {/* <svg xmlns='http://www.w3.org/2000/svg' version='1.1'>
-            <pattern id='pattern'
-                    x='0' y='0' width='24' height='24'
-                    patternUnits="userSpaceOnUse" >
-              <rect fill='#8AD88D' x='0' width='12' height='12' y='12'/>
-              <rect fill='#71A8DA' x='12' width='12' height='12' y='12'/>
-              <rect fill='#71A8DA' x='0' width='12' height='12' y='0'/>
-              <rect fill='#8AD88D' x='12' width='12' height='12' y='0'/>
-            </pattern>
-            <rect fill='url(#pattern)' x='0' y='0' width='100%' height='100%'/>
-          </svg> */}
           <div className="App">
     
             <InputForm submitToDo={this.submitToDo} />
