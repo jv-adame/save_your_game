@@ -141,7 +141,6 @@ class App extends Component {
               return toggleDisplayed;
             break;
          default:
-           /* lol */ 
          }
 
          this.setState({
