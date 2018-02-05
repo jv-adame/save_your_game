@@ -84,11 +84,14 @@
   width: 90%;
   padding: 10px;
 }
-/*Band-aid because the svg somehow supercedes CompleteButton on stack*/
+
+body{
+  margin: 0;
+}
+
 svg{
   position: absolute;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
+  /* height: auto; */
+  /* width: auto; */
   z-index: -10;
 }

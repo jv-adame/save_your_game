@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 /* DRAG N DRAWP*/
-const reorder = (list, startIndex, endIndex) =>{
-    const result = Array.from(list);
-    const [removed] = result.splice(startIndex, 1);
-    result.splice(endIndex, 0, removed);
+// const reorder = (list, startIndex, endIndex) =>{
+//     const result = Array.from(list);
+//     const [removed] = result.splice(startIndex, 1);
+//     result.splice(endIndex, 0, removed);
   
-    return result;
-  };
+//     return result;
+//   };
   
-  const getItemStyle = (draggableStyle, isDragging) => ({
-    userSelect: "none",
+//   const getItemStyle = (draggableStyle, isDragging) => ({
+//     userSelect: "none",
   
-    background: isDragging ? "red" : "blue"
-  });
+//     background: isDragging ? "red" : "blue"
+//   });
   
-  const getListStyle = isDraggingOver => ({
-    background: isDraggingOver ? "yellow" : "purple"
-  });
+//   const getListStyle = isDraggingOver => ({
+//     background: isDraggingOver ? "yellow" : "purple"
+//   });
   
   
   /* DRAG N DRAWP END*/
@@ -29,22 +29,22 @@ class ListItems extends React.Component{
 
     /* DRAG N DRAWP */
 
-    onDragEnd (result) {
-        // dropped outside the list
-        if(!result.destination) {
-           return; 
-        }
+    // onDragEnd (result) {
+    //     // dropped outside the list
+    //     if(!result.destination) {
+    //        return; 
+    //     }
         
-        const items = reorder(
-          this.state.list, 
-          result.source.index, 
-          result.destination.index
-        );
+    //     const items = reorder(
+    //       this.state.list, 
+    //       result.source.index, 
+    //       result.destination.index
+    //     );
         
-        this.setState({
-          items
-        });
-      }
+    //     this.setState({
+    //       items
+    //     });
+    //   }
 
     /* DRAG N DRAWP END */
 

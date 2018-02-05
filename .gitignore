@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 
-#database
+# mongo database
 /data/db
 
 # testing
