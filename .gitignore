@@ -5,7 +5,7 @@
 
 #database
 
-data/db
+/data/db
 
 # testing
 /coverage
