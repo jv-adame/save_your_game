@@ -3,17 +3,11 @@ const axios = require("axios");
 const Todo = require("../models/Todo.js");
 const bodyParser = require ('body-parser');
 const express = require("express"),
-    app = express();
-/*
+    app = express()
+    PORT = process.env.PORT || 8080;
 
-Create directory for database.
-$ mkdir -p data/db
+app.use(express.static(__dirname+"/build"))
 
-Run database connection.
-$ mongod --dbpath data/db
-
-ss
-*/
 app.use(bodyParser.json());
 
 //When post request is made, parse url encoded values
@@ -28,7 +22,7 @@ app.use(function(req, res, next) {
 
 
 
-const PORT = procecss.env.PORT || 8080;
+
 const MONGO_CONNECTION_STRING = "mongodb://localhost:27017"
 mongoose.connect(MONGO_CONNECTION_STRING);
 
