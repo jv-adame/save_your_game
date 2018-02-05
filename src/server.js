@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 
 
 
-const PORT = 8080;
+const PORT = procecss.env.PORT || 8080;
 const MONGO_CONNECTION_STRING = "mongodb://localhost:27017"
 mongoose.connect(MONGO_CONNECTION_STRING);
 
@@ -55,13 +55,11 @@ app.post("/", (req, res) =>{
         })
 });
 
-//GET (Retrieve entire list) [done]
+//GET (Retrieve entire list)
 app.get("/", (req, res)=>{
     Todo.find({})
     .then(array => {
         //When you use .find(), the results are ALWAYS given in an array, even if only one document matched 
-        //comment out asap
-      //  console.log("Successfully loaded list:",array);
         res.send(array);
     })
     .catch(error =>{
@@ -70,7 +68,7 @@ app.get("/", (req, res)=>{
     })
 })
 
-//GET (Retrieve single record by index) [done]
+//GET (Retrieve single record by index)
 app.get("/:todoID", (req, res)=>{
     Todo.find({"index": req.params.todoID})
     .then(object => {
@@ -83,7 +81,7 @@ app.get("/:todoID", (req, res)=>{
     })
 })
 
-//PUT (Update)[done]
+//PUT (Update)
 app.put("/", (req, res)=>{
 
     Todo.findOneAndUpdate(

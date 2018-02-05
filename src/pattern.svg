@@ -7,5 +7,5 @@
     <rect fill='#71A8DA' x='0' width='12' height='12' y='0'/>
     <rect fill='#8AD88D' x='12' width='12' height='12' y='0'/>
     </pattern>
-    <rect fill='url(#pattern)' x='0' y='0' width='100%' height='100%'/>
+    <rect fill='url(#pattern)' x='0' y='0' width='100vw' height='100vh'/>
 </svg>
