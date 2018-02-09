@@ -22,8 +22,11 @@ app.use(function(req, res, next) {
 
 
 
+//local development string
+//const MONGO_CONNECTION_STRING = "mongodb://localhost:27017"
 
-const MONGO_CONNECTION_STRING = "mongodb://localhost:27017"
+//mLab MongoDB string
+const MONGO_CONNECTION_STRING = "mongodb://heroku_pw9grc79:ehec8he1ogacr6vncq3alki8pa@ds231228.mlab.com:31228/heroku_pw9grc79"
 mongoose.connect(MONGO_CONNECTION_STRING);
 
 const connection = mongoose.connection;
