@@ -36,7 +36,7 @@ connection.on("open", ()=>{
 //POST - Create
 
 app.post("/data", (req, res) =>{
-    console.log(PORT);
+
     Todo({
         complete: req.body.complete,
         text: req.body.text,
