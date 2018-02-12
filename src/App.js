@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import applekid from "./apple_kid.ttf";
 import './App.css';
 import axios from "axios";
 import InputForm from "./inputForm";
