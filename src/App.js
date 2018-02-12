@@ -9,7 +9,7 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import body_parser from "body-parser";
 
 
-const baseURL = process.env.baseURL || "http://localhost:8080/data";
+const baseURL = "/data";
 
 class App extends Component {
   constructor(){
