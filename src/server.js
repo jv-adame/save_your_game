@@ -23,8 +23,8 @@ app.use(function(req, res, next) {
 // "mongodb://heroku_pw9grc79:ehec8he1ogacr6vncq3alki8pa@ds231228.mlab.com:31228/heroku_pw9grc79" 
 // MONGODB_URI
 
-const MONGO_CONNECTION_STRING = "mongodb://heroku_pw9grc79:ehec8he1ogacr6vncq3alki8pa@ds231228.mlab.com:31228/heroku_pw9grc79" 
-mongoose.connect(MONGO_CONNECTION_STRING);
+//const MONGO_CONNECTION_STRING = "mongodb://heroku_pw9grc79:ehec8he1ogacr6vncq3alki8pa@ds231228.mlab.com:31228/heroku_pw9grc79" 
+mongoose.connect(process.env.MONGODB_URI);
 
 const connection = mongoose.connection;
 
