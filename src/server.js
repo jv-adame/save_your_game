@@ -105,7 +105,12 @@ app.delete("/data", (req ,res) =>{
 
 })
 
+//At the end of our file, above app.listen()
 
+app.get('*', (req,res)=>{
+    res.sendFile(__dirname + '/build/index.html')
+  })
+  
 app.listen(PORT, ()=>{
     console.log("We are listening on Port", PORT);
 })
