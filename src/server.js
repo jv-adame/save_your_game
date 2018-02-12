@@ -35,7 +35,7 @@ connection.on("open", ()=>{
 
 //POST - Create
 
-app.post("/", (req, res) =>{
+app.post("/data", (req, res) =>{
     Todo({
         complete: req.body.complete,
         text: req.body.text,
@@ -50,7 +50,7 @@ app.post("/", (req, res) =>{
 });
 
 //GET (Retrieve entire list)
-app.get("/", (req, res)=>{
+app.get("/data", (req, res)=>{
     Todo.find({})
     .then(array => {
         //When you use .find(), the results are ALWAYS given in an array, even if only one document matched 
@@ -63,7 +63,7 @@ app.get("/", (req, res)=>{
 })
 
 //GET (Retrieve single record by index)
-app.get("/:todoID", (req, res)=>{
+app.get("/data/:todoID", (req, res)=>{
     Todo.find({"index": req.params.todoID})
     .then(object => {
         //When you use .find(), the results are ALWAYS given in an array, even if only one document matched 
@@ -76,7 +76,7 @@ app.get("/:todoID", (req, res)=>{
 })
 
 //PUT (Update)
-app.put("/", (req, res)=>{
+app.put("/data", (req, res)=>{
 
     Todo.findOneAndUpdate(
         {"_id": req.body._id}, //identifying object to update
@@ -92,7 +92,7 @@ app.put("/", (req, res)=>{
 })
 
 //DELETE (Delete)
-app.delete("/", (req ,res) =>{
+app.delete("/data", (req ,res) =>{
     Todo.findOneAndRemove({"_id":req.body.id})
     .then(deletedToDo=>{
         res.json({deleted: true})
