@@ -21,7 +21,8 @@ app.use(function(req, res, next) {
   });
 
 mongoose.connect(process.env.MONGODB_URI);
-
+//Local Debugging Connection
+// mongoose.connect('mongodb://localhost/data/db/');
 const connection = mongoose.connection;
 
 connection.on("open", ()=>{
@@ -97,8 +98,6 @@ app.delete("/data", (req ,res) =>{
     .catch(err =>{
         res.status(400).json({err});
     })
-    
-
 
 })
 

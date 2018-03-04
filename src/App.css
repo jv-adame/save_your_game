@@ -9,22 +9,6 @@ html{
   padding: 10px;
 }
 
-/*I didn't use scss this time, can you tell?*/
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5rem;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 .done {
   text-decoration: line-through;
   color: grey;
@@ -38,7 +22,7 @@ html{
   list-style: none;
   text-align: left;
   margin: 10px 0;
-  
+  overflow-wrap: break-word;
 }
 
 .flexContain{
@@ -46,6 +30,7 @@ html{
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 0;
+  /* margin: 50vw 0; */
 }
 
 .todoContain{
@@ -79,8 +64,12 @@ html{
   background-color: black;
   border: 5px solid white;
   border-radius: 5px;
-  width: 90vw;
+  width: 80%;
   padding: 10px;
+}
+
+.add{
+  width: 15%;
 }
 
 body{
@@ -94,18 +83,21 @@ svg{
 
 /*Responsive Design*/
 
-/*Tablet Responsive Size*/
-@media (max-width: 768px){
-
-	
-}
-
-@media (max-width: 616px){
-
-}
 
 /*Phone
  Responsive Size*/
 @media (max-width: 480px){
+
+.add{
+  width: 25%;
+}
+
+.inputBar{
+  width: 70%;
+}
+
+.todoContain{
+  flex-direction: column;
+}
 
 }

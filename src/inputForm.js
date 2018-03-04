@@ -20,7 +20,7 @@ class InputForm extends React.Component{
             <form className="toDo" onSubmit={this.noRefreshEVER}>
                 <div className="flexContain">
                     <input type="text" ref="textInput" className="inputBar"  placeholder="Add a To-Do"  onChange={this.toggleButton}/>
-                    <button ref="submitButton" className="btn btn-primary" type="submit" onClick={()=> this.props.submitToDo(this.refs.textInput.value)}>Add</button>
+                    <button ref="submitButton" className="btn btn-primary add" type="submit" onClick={()=> this.props.submitToDo(this.refs.textInput.value)}>Add</button>
                 </div>
             </form>
         )
