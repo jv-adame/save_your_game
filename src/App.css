@@ -1,11 +1,10 @@
-/* @font-face{
-	font-family: "applekid";
-	src: url("apple_kid.ttf") format("truetype");
-} */
+html{
+  font-size: 16px;
+}
 
 .App {
   text-align: center;
-  width: 65%;
+  width: 65vw;
   margin: 0 auto;
   padding: 10px;
 }
@@ -19,7 +18,7 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .App-intro {
@@ -38,7 +37,6 @@
   color: white;
   list-style: none;
   text-align: left;
-  /* font-family: "applekid"; */
   margin: 10px 0;
   
 }
@@ -81,7 +79,7 @@
   background-color: black;
   border: 5px solid white;
   border-radius: 5px;
-  width: 90%;
+  width: 90vw;
   padding: 10px;
 }
 
@@ -91,7 +89,23 @@ body{
 
 svg{
   position: absolute;
-  /* height: auto; */
-  /* width: auto; */
   z-index: -10;
+}
+
+/*Responsive Design*/
+
+/*Tablet Responsive Size*/
+@media (max-width: 768px){
+
+	
+}
+
+@media (max-width: 616px){
+
+}
+
+/*Phone
+ Responsive Size*/
+@media (max-width: 480px){
+
 }
