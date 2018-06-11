@@ -20,6 +20,8 @@ app.use(function(req, res, next) {
     next();
   });
 
+
+// Heroku MongoDB connection
 mongoose.connect(process.env.MONGODB_URI);
 //Local Debugging Connection
 // mongoose.connect('mongodb://localhost/data/db/');

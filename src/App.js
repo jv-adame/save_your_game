@@ -24,7 +24,6 @@ class App extends Component {
     };
 
     //Bindings
-    this.checkClicked = this.checkClicked.bind(this);
     this.submitToDo = this.submitToDo.bind(this);
     this.clearCompleted = this.clearCompleted.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
@@ -76,8 +75,8 @@ class App extends Component {
   }
 
   //Updates the Checked status of the todos
-  //PUT {WIP}
-  checkClicked(id){
+  //PUT
+  checkClicked = (id) => {
     let copy = Array.from(this.state.list);
     
     let s = copy.find( function(todo){
